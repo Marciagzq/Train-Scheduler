@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Orange Train</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            width: 80%;
+            margin: 0 auto;
+            background-image: url('https://images5.alphacoders.com/437/thumb-1920-437778.jpg');
+        }
+
+        .jumbotron {
+            margin-top: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background-position: 0% 40%;
+            background-size: cover;
+            /* background-image: url('https://images5.alphacoders.com/437/thumb-1920-437778.jpg'); */
+            height: 200px;
+            background: rgba(218, 218, 218, 0.6);
+
+        }
+        .display-4{
+            letter-spacing: 1px;
+        }
+        .display-4,
+        .lead{
+            color: rgb(0, 0, 0);
+        }
+        .lead{
+            font-weight:600;
+            letter-spacing: 3px;
+            word-spacing: 8px;
+        }
+        .card {
+            border: 1px solid #c2c2c2;
+            opacity: 0.8;
+            background: rgba(218, 218, 218);
+            /* font-weight: bold; */
+        }
+        .removeX{
+            border-radius: 6px;
+            background-color: #000000;
+            color: #ffffff;
+            border-color: black;
+            font-size:10px;
+           opacity: 0.6;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Orange County Train</h1>
+            <p class="lead">Reliable        Transportation</p>
+        </div>
+    </div>
+    <div class="card" style="width: 100%">
+        <div class="card-header">
+            Current Employees
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" id="name-added">Train Name</th>
+                            <th scope="col" id="destination-added">Destination</th>
+                            <th scope="col" id="frequency-added">Frequency (min)</th>
+                            <th scope="col" id="nextArrival-added">Next Arrival</th>
+                            <th scope="col" id="minutes-away-added">Minutes Away</th>
+                            <th scope="col" id="minutes-away-added">Remove/Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header">
+            Add Train</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <form>
+                    <fieldset>
+                        <div class="form-group">
+                            <label>Train Name</label>
+                            <input type="text" id="train-name" class="form-control" placeholder="Train Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Destination</label>
+                            <input type="text" id="destination" class="form-control" placeholder="Destination">
+                        </div>
+                        <div class="form-group">
+                            <label>First Train Time (HH:mm - military time)</label>
+                            <input type="text" id="first-train-time" class="form-control" maxlength="4"
+                                placeholder="00:00" onkeypress="return isNumber(event)">
+                        </div>
+                        <div class="form-group">
+                            <label>Frequency (min)</label>
+                            <input type="number" min='1' max='59' id="frequency" class="form-control" placeholder="00">
+                        </div>
+                        <br>
+                        <button type="submit" id="submit" class="btn btn-primary float-right">Submit</button>
+                        
+                    </fieldset>
+    </div>
+    </form>
+    </li>
+    </ul>
+    </div>
+
+    <br>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
+
+</body>
+
+</html>
