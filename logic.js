@@ -7,11 +7,8 @@ function isNumber(event){
   return true;
 }
 
+//To call any other function inside only when the page has completely downloaded
 $( document ).ready(function() {
-  
-// ("#first-train-time").mask("00:00");
-// ("#frequency").mask("00");
-
 
 $("tbody").on('click', ".removeX", function(){
   var tempAttr = $(this).attr('datakey');
@@ -51,6 +48,8 @@ $("tbody").on('click', ".removeX", function(){
           tableRow += "<td scope='col'>" + rowresults.minutesaway + "</td>"
           tableRow += "<td scope='col'>" + "<input type='button' datakey=" + index + " value='X' class='removeX'>" + "</td>"
  tableRow += "</tr>"
+
+        
 
           $("tbody").append(tableRow);
         }
@@ -108,7 +107,7 @@ database.ref().on("child_removed", function (snapshot) {
         tableRow += "<td scope='col'>" + row.freq + "</td>"
         tableRow += "<td scope='col'>" + rowresults.arrival.format("HH:mm") + "</td>"
         tableRow += "<td scope='col'>" + rowresults.minutesaway + "</td>"
-        tableRow += "<td scope='col'>" + "<input type='button' datakey=" + index + " value='X' class='removeX'>" + "</td>"
+        tableRow += "<td scope='col'>" + "<input type='button' datakey=" + index + " value='X' class='removeX' class='btn btn-warning'>" + "</td>"
         tableRow += "</tr>"
 
         $("tbody").append(tableRow);
