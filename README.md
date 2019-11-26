@@ -1,11 +1,11 @@
 
-#University of Central Florida
-###Coding Bootcamp 
+# University of Central Florida
+### Coding Bootcamp 
 #### Full Stack Developer 
 ![alt text](https://portfolium1.cloudimg.io/s/crop/128x128/https://cdn.portfolium.com/ugcs3%2Fedu%2F9tDF4wvqRdewUvBbZ97x_PegasusBrightGold150x150.png "Logo Title Text 1")
 - - -
 
-###Train Scheduler
+### Train Scheduler
 
 
 
@@ -30,7 +30,7 @@ I also incorporate the format of Momentjs.com to display the time in a right for
 
 - - - - 
 
-#####Regarding of the code
+##### Regarding of the code
 
 *  Libraries and languages used for accomplished this assignment 
 
